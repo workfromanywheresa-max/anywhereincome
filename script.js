@@ -1,9 +1,12 @@
-// script.js
-// Load posts from posts.json and display on homepage
-fetch('./posts.json') // relative path to ensure it works on Cloudflare
-  .then(response => response.json())
+fetch('./posts.json')
+  .then(response => {
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    return response.json();
+  })
   .then(posts => {
     const postList = document.getElementById('post-list');
+    if (!postList) throw new Error("No element with id 'post-list' found");
+
     posts.forEach(post => {
       const postEl = document.createElement('div');
       postEl.className = 'post';
@@ -19,4 +22,4 @@ fetch('./posts.json') // relative path to ensure it works on Cloudflare
       postList.appendChild(postEl);
     });
   })
-  .catch(error => console.error('Error loading posts:', error));
+  .catch(err => console.error('Error loading posts:', err));
