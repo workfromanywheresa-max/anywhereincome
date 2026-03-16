@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work From Anywhere Blog</title>
   <style>
+    /* Dark mode body */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0 20px;
-      background: #121212; /* Dark background */
-      color: #e0e0e0; /* Light text */
+      background: #121212; /* dark background */
+      color: #e0e0e0; /* light text */
+      line-height: 1.6;
     }
 
+    /* Header */
     header {
       text-align: center;
-      background: #1f1f1f; /* Dark header */
+      background: #1f1f1f; /* dark header */
       padding: 20px 0;
       border-bottom: 1px solid #333;
     }
@@ -33,6 +36,7 @@
       margin: 0;
     }
 
+    /* Posts grid */
     .posts {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -41,11 +45,12 @@
       margin-bottom: 50px;
     }
 
+    /* Single post card */
     .post {
-      background: #1f1f1f; /* Dark card background */
+      background: #1f1f1f; /* dark card */
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.7); /* Strong shadow for dark */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
@@ -67,12 +72,12 @@
     .post-content h2 {
       margin: 0 0 10px;
       font-size: 1.2rem;
-      color: #fff; /* Light heading */
+      color: #ffffff; /* heading light */
     }
 
     .post-content p {
       margin: 0;
-      color: #ccc; /* Lighter text for description */
+      color: #ccc; /* description light */
       font-size: 0.9rem;
     }
 
@@ -81,9 +86,57 @@
       color: inherit;
     }
 
-    /* Smooth transition for dark mode elements */
+    /* Smooth transitions */
     body, .post, header {
       transition: background 0.3s, color 0.3s;
+    }
+
+    /* Post content page (like honeygain.html) */
+    .post-content-wrapper {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #1f1f1f; /* dark wrapper */
+      padding: 20px;
+      border-radius: 10px;
+      color: #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .post-content-wrapper h1 {
+      font-size: 1.5em;
+      color: #ffffff;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .post-content-wrapper h2 {
+      color: #fff;
+      margin-top: 30px;
+    }
+
+    .post-content-wrapper p, .post-content-wrapper li {
+      color: #ccc;
+    }
+
+    .post-content-wrapper a.referral-link {
+      background: #ffcc00;
+      color: #111;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: inline-block;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .post-content-wrapper a.referral-link:hover {
+      background: #ffdd33;
+    }
+
+    .lazy-bg img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
     }
   </style>
 </head>
@@ -95,7 +148,25 @@
   </header>
 
   <div class="posts" id="post-list">
-    <!-- Posts will be loaded here dynamically -->
+    <div class="post">
+      <a href="posts/forex-money.html">
+        <img src="https://via.placeholder.com/300x150" alt="Forex Money Tips">
+        <div class="post-content">
+          <h2>Forex Money Tips</h2>
+          <p>Learn how to make money with Forex trading from home.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="post">
+      <a href="posts/affiliate-income.html">
+        <img src="https://via.placeholder.com/300x150" alt="Affiliate Income">
+        <div class="post-content">
+          <h2>Affiliate Income Guide</h2>
+          <p>Step-by-step guide to earning passive income online.</p>
+        </div>
+      </a>
+    </div>
   </div>
 
   <script src="script.js"></script>
