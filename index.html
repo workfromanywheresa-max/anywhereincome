@@ -12,7 +12,6 @@
       padding: 0 20px;
       background: #121212; /* dark background */
       color: #e0e0e0; /* light text */
-      line-height: 1.6;
     }
 
     /* Header */
@@ -90,54 +89,6 @@
     body, .post, header {
       transition: background 0.3s, color 0.3s;
     }
-
-    /* Post content page (like honeygain.html) */
-    .post-content-wrapper {
-      max-width: 800px;
-      margin: 20px auto;
-      background: #1f1f1f; /* dark wrapper */
-      padding: 20px;
-      border-radius: 10px;
-      color: #e0e0e0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
-    }
-
-    .post-content-wrapper h1 {
-      font-size: 1.5em;
-      color: #ffffff;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .post-content-wrapper h2 {
-      color: #fff;
-      margin-top: 30px;
-    }
-
-    .post-content-wrapper p, .post-content-wrapper li {
-      color: #ccc;
-    }
-
-    .post-content-wrapper a.referral-link {
-      background: #ffcc00;
-      color: #111;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 5px;
-      display: inline-block;
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    .post-content-wrapper a.referral-link:hover {
-      background: #ffdd33;
-    }
-
-    .lazy-bg img {
-      width: 100%;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
   </style>
 </head>
 <body>
@@ -148,6 +99,7 @@
   </header>
 
   <div class="posts" id="post-list">
+    <!-- Example static posts -->
     <div class="post">
       <a href="posts/forex-money.html">
         <img src="https://via.placeholder.com/300x150" alt="Forex Money Tips">
@@ -167,6 +119,7 @@
         </div>
       </a>
     </div>
+    <!-- More posts can be added here -->
   </div>
 
   <script src="script.js"></script>
