@@ -99,6 +99,53 @@
       text-decoration: none;
       color: inherit;
     }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 12px 0;
+      border-top: 1px solid #333;
+      color: #888;
+      font-size: 0.8rem;
+      background: #121212;
+    }
+
+    /* Cookie Banner */
+    #cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #1f1f1f;
+      color: #e0e0e0;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.7);
+      z-index: 9999;
+    }
+    #cookie-banner a {
+      color: #fff;
+      text-decoration: underline;
+    }
+    #cookie-banner button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 500px) {
+      #cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -112,6 +159,32 @@
   <div class="posts" id="post-list">
     <!-- Posts will be dynamically added here -->
   </div>
+
+  <footer>
+    <p>© 2026 AnywhereIncome – Information for educational purposes only. Earnings not guaranteed.</p>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner">
+    <p>This site uses cookies to improve your experience. By continuing, you agree to our <a href="#">Privacy Policy</a>.</p>
+    <button id="cookie-ok">Got it</button>
+  </div>
+
+  <script>
+    // Cookie Banner functionality
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('cookie-ok');
+
+    btn.addEventListener('click', () => {
+      banner.style.display = 'none';
+      localStorage.setItem('cookieAccepted', 'true');
+    });
+
+    // Show banner only if not accepted yet
+    if(localStorage.getItem('cookieAccepted') === 'true'){
+      banner.style.display = 'none';
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
