@@ -9,13 +9,15 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0 20px;
-      background: #f4f4f4;
+      background: #121212; /* Dark background */
+      color: #e0e0e0; /* Light text */
     }
 
     header {
       text-align: center;
-      background: #111;
+      background: #1f1f1f; /* Dark header */
       padding: 20px 0;
+      border-bottom: 1px solid #333;
     }
 
     header img {
@@ -40,15 +42,16 @@
     }
 
     .post {
-      background: white;
+      background: #1f1f1f; /* Dark card background */
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7); /* Strong shadow for dark */
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .post:hover {
       transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.8);
     }
 
     .post img {
@@ -64,17 +67,23 @@
     .post-content h2 {
       margin: 0 0 10px;
       font-size: 1.2rem;
+      color: #fff; /* Light heading */
     }
 
     .post-content p {
       margin: 0;
-      color: #555;
+      color: #ccc; /* Lighter text for description */
       font-size: 0.9rem;
     }
 
     a {
       text-decoration: none;
       color: inherit;
+    }
+
+    /* Smooth transition for dark mode elements */
+    body, .post, header {
+      transition: background 0.3s, color 0.3s;
     }
   </style>
 </head>
