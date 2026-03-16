@@ -5,20 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AnywhereIncome Blog</title>
   <style>
-    /* Dark mode body */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0 20px;
-      background: #121212; /* dark background */
-      color: #e0e0e0; /* light text */
+      background: #121212;
+      color: #e0e0e0;
       transition: background 0.3s, color 0.3s;
     }
 
-    /* Header */
     header {
       text-align: center;
-      background: #1f1f1f; /* dark header */
+      background: #1f1f1f;
       padding: 10px 0;
       border-bottom: 1px solid #333;
       transition: background 0.3s, color 0.3s;
@@ -47,7 +45,6 @@
       margin: 0 auto;
     }
 
-    /* Posts grid */
     .posts {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -56,9 +53,8 @@
       margin-bottom: 50px;
     }
 
-    /* Single post card */
     .post {
-      background: #1f1f1f; /* dark card */
+      background: #1f1f1f;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 2px 8px rgba(0,0,0,0.7);
@@ -76,7 +72,6 @@
       object-fit: cover;
     }
 
-    /* Super compact post content */
     .post-content {
       padding: 2px 8px 5px 8px;
     }
@@ -100,7 +95,6 @@
       color: inherit;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 12px 0;
@@ -110,10 +104,19 @@
       background: #121212;
     }
 
-    /* Cookie Banner (slide + fade) */
+    footer a {
+      color: #ccc;
+      margin: 0 5px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     #cookie-banner {
       position: fixed;
-      bottom: -100px;           /* start off-screen */
+      bottom: -100px;
       left: 0;
       width: 100%;
       background: #1f1f1f;
@@ -125,13 +128,13 @@
       font-size: 0.85rem;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.7);
       z-index: 9999;
-      opacity: 0;               /* invisible initially */
+      opacity: 0;
       transition: bottom 0.8s ease, opacity 0.8s ease;
     }
 
     #cookie-banner.show {
-      bottom: 0;                /* slide up */
-      opacity: 1;               /* fade in */
+      bottom: 0;
+      opacity: 1;
     }
 
     #cookie-banner a {
@@ -159,53 +162,53 @@
 </head>
 <body>
 
-  <header>
-    <h1>AnywhereIncome</h1>
-    <p class="subtitle">Learn how to make money</p>
-    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglu2crskAzw2ySuw8mTk0zHB3fQa5NNxzQLtYfwuhl5OMq7Q6mDyNGiE6p1hW0qhHHpuCzTU2-4yC1p1FZwyXqhbWfvD5V4Tus2CXPKav8G1Jb6AOCU-NxYF2y3nkGpB3zkwaKpQFK3USWcGfagB9u4Xy7W0mqxtnoH6iAsvD9DPROc-g356GDBDGeYcuL/s320/1000170985.webp" alt="AnywhereIncome">
-  </header>
+<header>
+  <h1>AnywhereIncome</h1>
+  <p class="subtitle">Learn how to make money</p>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglu2crskAzw2ySuw8mTk0zHB3fQa5NNxzQLtYfwuhl5OMq7Q6mDyNGiE6p1hW0qhHHpuCzTU2-4yC1p1FZwyXqhbWfvD5V4Tus2CXPKav8G1Jb6AOCU-NxYF2y3nkGpB3zkwaKpQFK3USWcGfagB9u4Xy7W0mqxtnoH6iAsvD9DPROc-g356GDBDGeYcuL/s320/1000170985.webp" alt="AnywhereIncome">
+</header>
 
-  <div class="posts" id="post-list">
-    <!-- Posts will be dynamically added here -->
-  </div>
+<div class="posts" id="post-list">
+</div>
 
-  <footer>
-    <p>© 2026 AnywhereIncome – Information for educational purposes only. Earnings not guaranteed.</p>
-  </footer>
+<footer>
+  <p>© 2026 AnywhereIncome – Information for educational purposes only. Earnings not guaranteed.</p>
+  <p>
+    <a href="/pages/contact.html">Contact</a> |
+    <a href="/pages/terms-privacy.html">Privacy & Terms</a>
+  </p>
+</footer>
 
-  <!-- Cookie Banner -->
-  <div id="cookie-banner">
-    <p>
-      This site uses cookies to improve your experience. By continuing, you agree to our 
-      <a href="/pages/terms-privacy.html">Privacy Policy</a>.
-    </p>
-    <button id="cookie-ok">Got it</button>
-  </div>
+<div id="cookie-banner">
+  <p>
+    This site uses cookies to improve your experience. By continuing, you agree to our 
+    <a href="/pages/terms-privacy.html">Privacy Policy</a>.
+  </p>
+  <button id="cookie-ok">Got it</button>
+</div>
 
-  <script>
-    const banner = document.getElementById('cookie-banner');
-    const btn = document.getElementById('cookie-ok');
+<script>
+const banner = document.getElementById('cookie-banner');
+const btn = document.getElementById('cookie-ok');
 
-    // Initially hide
-    banner.classList.remove('show');
+banner.classList.remove('show');
 
-    // Show banner after 10 seconds if not already accepted
-    if (localStorage.getItem('cookieAccepted') !== 'true') {
-      setTimeout(() => {
-        banner.classList.add('show'); // slide up + fade in
-      }, 10000);
-    }
+if (localStorage.getItem('cookieAccepted') !== 'true') {
+  setTimeout(() => {
+    banner.classList.add('show');
+  }, 10000);
+}
 
-    // When user clicks "Got it"
-    btn.addEventListener('click', () => {
-      banner.classList.remove('show'); // slide down + fade out
-      setTimeout(() => {
-        banner.style.display = 'none'; // hide completely after animation
-      }, 800); // matches CSS transition
-      localStorage.setItem('cookieAccepted', 'true');
-    });
-  </script>
+btn.addEventListener('click', () => {
+  banner.classList.remove('show');
+  setTimeout(() => {
+    banner.style.display = 'none';
+  }, 800);
+  localStorage.setItem('cookieAccepted', 'true');
+});
+</script>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
