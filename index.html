@@ -19,29 +19,29 @@
     header {
       text-align: center;
       background: #1f1f1f; /* dark header */
-      padding: 10px 0; /* reduced height */
+      padding: 10px 0;
       border-bottom: 1px solid #333;
       transition: background 0.3s, color 0.3s;
     }
 
     header h1 {
-      margin: 0 0 5px 0; /* tighter spacing */
-      font-size: 1.6rem; /* slightly smaller */
+      margin: 0 0 5px 0;
+      font-size: 1.6rem;
       color: #ffffff;
     }
 
     .subtitle {
       text-align: center;
-      margin: 0 0 10px 0; /* reduced spacing */
-      font-size: 0.9rem; /* smaller subtitle */
+      margin: 0 0 10px 0;
+      font-size: 0.9rem;
       color: #bbbbbb;
       font-weight: normal;
       line-height: 1.3;
     }
 
     header img {
-      width: 80%; /* smaller image */
-      max-width: 500px; /* reduced from 720px */
+      width: 80%;
+      max-width: 500px;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -72,24 +72,27 @@
 
     .post img {
       width: 100%;
-      height: 150px;
+      height: 150px; /* image height stays the same */
       object-fit: cover;
     }
 
+    /* Super compact post content */
     .post-content {
-      padding: 15px;
+      padding: 2px 8px 5px 8px; /* minimal padding */
     }
 
     .post-content h2 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
-      color: #ffffff; /* heading light */
+      margin: 0 0 2px; /* tight spacing */
+      font-size: 0.95rem;
+      line-height: 1.1;
+      color: #ffffff;
     }
 
     .post-content p {
       margin: 0;
-      color: #ccc; /* description light */
-      font-size: 0.9rem;
+      font-size: 0.78rem; /* smaller description */
+      line-height: 1.05;
+      color: #ccc;
     }
 
     a {
@@ -108,6 +111,14 @@
 
   <div class="posts" id="post-list">
     <!-- Posts will be dynamically added here -->
+    <!-- Example Post -->
+    <div class="post">
+      <img src="https://via.placeholder.com/400x150" alt="Post Image">
+      <div class="post-content">
+        <h2>Example Post Title</h2>
+        <p>This is a short description for the example post to show compact spacing.</p>
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
