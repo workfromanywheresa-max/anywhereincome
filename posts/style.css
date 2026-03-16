@@ -1,0 +1,89 @@
+/* Dark mode body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #121212; /* dark background */
+  color: #e0e0e0; /* light text */
+  line-height: 1.6;
+}
+
+a {
+  color: #4ea8ff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.post-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #1e1e1e; /* dark card */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+h2 {
+  margin-top: 30px;
+  color: #ffffff;
+}
+
+ol, ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.lazy-bg img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Updated referral link style */
+.referral-link {
+  display: inline-block;
+  background: #ffffff;           /* white background */
+  color: #1a73e8;               /* blue text */
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid #1a73e8;   /* blue border */
+  text-align: center;
+  margin: 10px 0;
+  transition: background 0.3s, color 0.3s;
+  text-decoration: none;
+}
+
+.referral-link:hover {
+  background: #1a73e8;          /* blue background on hover */
+  color: #ffffff;               /* white text on hover */
+}
+
+details {
+  margin-bottom: 10px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #4ea8ff;
+}
+
+p, li {
+  color: #ccc;
+}
+
+strong {
+  color: #ffffff;
+}
