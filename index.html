@@ -12,6 +12,7 @@
       padding: 0 20px;
       background: #121212; /* dark background */
       color: #e0e0e0; /* light text */
+      transition: background 0.3s, color 0.3s;
     }
 
     /* Header */
@@ -20,13 +21,22 @@
       background: #1f1f1f; /* dark header */
       padding: 20px 0;
       border-bottom: 1px solid #333;
+      transition: background 0.3s, color 0.3s;
     }
 
     header h1 {
-      display: block; /* show heading */
-      margin: 0 0 15px 0; /* space below heading */
+      margin: 0 0 10px 0; 
       font-size: 2rem;
       color: #ffffff;
+    }
+
+    .subtitle {
+      text-align: center;        /* center under h1 */
+      margin: 0 0 15px 0;        /* spacing above/below */
+      font-size: 1rem;           /* smaller than h1 */
+      color: #bbbbbb;            /* lighter gray for dark mode */
+      font-weight: normal;
+      line-height: 1.4;
     }
 
     header img {
@@ -86,17 +96,13 @@
       text-decoration: none;
       color: inherit;
     }
-
-    /* Smooth transitions */
-    body, .post, header {
-      transition: background 0.3s, color 0.3s;
-    }
   </style>
 </head>
 <body>
 
   <header>
     <h1>AnywhereIncome</h1>
+    <p class="subtitle">Learn how to make money</p>
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglu2crskAzw2ySuw8mTk0zHB3fQa5NNxzQLtYfwuhl5OMq7Q6mDyNGiE6p1hW0qhHHpuCzTU2-4yC1p1FZwyXqhbWfvD5V4Tus2CXPKav8G1Jb6AOCU-NxYF2y3nkGpB3zkwaKpQFK3USWcGfagB9u4Xy7W0mqxtnoH6iAsvD9DPROc-g356GDBDGeYcuL/s320/1000170985.webp" alt="AnywhereIncome">
   </header>
 
