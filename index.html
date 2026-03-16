@@ -175,7 +175,10 @@
 
   <!-- Cookie Banner -->
   <div id="cookie-banner">
-    <p>This site uses cookies to improve your experience. By continuing, you agree to our <a href="#">Privacy Policy</a>.</p>
+    <p>
+      This site uses cookies to improve your experience. By continuing, you agree to our 
+      <a href="/pages/terms-privacy.html">Privacy Policy</a>.
+    </p>
     <button id="cookie-ok">Got it</button>
   </div>
 
@@ -190,7 +193,7 @@
     if (localStorage.getItem('cookieAccepted') !== 'true') {
       setTimeout(() => {
         banner.classList.add('show'); // slide up + fade in
-      }, 5000);
+      }, 10000);
     }
 
     // When user clicks "Got it"
