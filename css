@@ -1,7 +1,0 @@
-.lazy-bg img {
-  display: block;           /* removes inline spacing issues */
-  max-width: 100%;          /* ensures image fits within container */
-  height: auto;             /* preserves aspect ratio */
-  margin: 20px auto;        /* adds spacing above and below, centers image */
-  border-radius: 8px;       /* optional: makes it look nicer */
-}
