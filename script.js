@@ -1,5 +1,6 @@
+// script.js
 // Load posts from posts.json and display on homepage
-fetch('posts.json')
+fetch('./posts.json') // relative path to ensure it works on Cloudflare
   .then(response => response.json())
   .then(posts => {
     const postList = document.getElementById('post-list');
