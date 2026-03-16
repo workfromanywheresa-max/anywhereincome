@@ -72,17 +72,17 @@
 
     .post img {
       width: 100%;
-      height: 150px; /* image height stays the same */
+      height: 150px;
       object-fit: cover;
     }
 
     /* Super compact post content */
     .post-content {
-      padding: 2px 8px 5px 8px; /* minimal padding */
+      padding: 2px 8px 5px 8px;
     }
 
     .post-content h2 {
-      margin: 0 0 2px; /* tight spacing */
+      margin: 0 0 2px;
       font-size: 0.95rem;
       line-height: 1.1;
       color: #ffffff;
@@ -90,7 +90,7 @@
 
     .post-content p {
       margin: 0;
-      font-size: 0.78rem; /* smaller description */
+      font-size: 0.78rem;
       line-height: 1.05;
       color: #ccc;
     }
@@ -110,10 +110,10 @@
       background: #121212;
     }
 
-    /* Cookie Banner */
+    /* Cookie Banner (slide + fade) */
     #cookie-banner {
       position: fixed;
-      bottom: 0;
+      bottom: -100px;           /* start off-screen */
       left: 0;
       width: 100%;
       background: #1f1f1f;
@@ -125,11 +125,20 @@
       font-size: 0.85rem;
       box-shadow: 0 -2px 8px rgba(0,0,0,0.7);
       z-index: 9999;
+      opacity: 0;               /* invisible initially */
+      transition: bottom 0.8s ease, opacity 0.8s ease;
     }
+
+    #cookie-banner.show {
+      bottom: 0;                /* slide up */
+      opacity: 1;               /* fade in */
+    }
+
     #cookie-banner a {
       color: #fff;
       text-decoration: underline;
     }
+
     #cookie-banner button {
       background: #333;
       color: #fff;
@@ -171,19 +180,27 @@
   </div>
 
   <script>
-    // Cookie Banner functionality
     const banner = document.getElementById('cookie-banner');
     const btn = document.getElementById('cookie-ok');
 
+    // Initially hide
+    banner.classList.remove('show');
+
+    // Show banner after 10 seconds if not already accepted
+    if (localStorage.getItem('cookieAccepted') !== 'true') {
+      setTimeout(() => {
+        banner.classList.add('show'); // slide up + fade in
+      }, 10000);
+    }
+
+    // When user clicks "Got it"
     btn.addEventListener('click', () => {
-      banner.style.display = 'none';
+      banner.classList.remove('show'); // slide down + fade out
+      setTimeout(() => {
+        banner.style.display = 'none'; // hide completely after animation
+      }, 800); // matches CSS transition
       localStorage.setItem('cookieAccepted', 'true');
     });
-
-    // Show banner only if not accepted yet
-    if(localStorage.getItem('cookieAccepted') === 'true'){
-      banner.style.display = 'none';
-    }
   </script>
 
   <script src="script.js"></script>
