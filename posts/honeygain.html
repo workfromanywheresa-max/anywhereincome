@@ -4,50 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* Dark mode body */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background: #f4f4f4;
-      color: #111;
+      background: #121212; /* dark background */
+      color: #e0e0e0; /* light text */
       line-height: 1.6;
     }
+
     a {
-      color: #1a73e8;
+      color: #4ea8ff;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
+
     .post-content-wrapper {
       max-width: 800px;
       margin: 0 auto;
-      background: #fff;
+      background: #1e1e1e; /* dark card */
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
     }
+
     h1 {
       text-align: center;
-      font-size: 1.5em; /* smaller main title */
+      font-size: 1.5em;
       margin-bottom: 20px;
-      color: #111;
+      color: #ffffff;
     }
     h2 {
       margin-top: 30px;
-      color: #222;
+      color: #ffffff;
     }
+
     ol, ul {
       margin-left: 20px;
       margin-bottom: 20px;
     }
+
     .lazy-bg img {
       width: 100%;
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
+
     .referral-link {
       display: inline-block;
       background: #ffcc00;
@@ -57,17 +65,32 @@
       border-radius: 5px;
       text-align: center;
       margin: 10px 0;
+      transition: background 0.3s;
     }
+
     .referral-link:hover {
       background: #ffdd33;
     }
+
     details {
       margin-bottom: 10px;
     }
+
     summary {
       cursor: pointer;
       font-weight: bold;
+      color: #4ea8ff;
     }
+
+    /* Paragraphs & strong text */
+    p, li {
+      color: #ccc;
+    }
+
+    strong {
+      color: #ffffff;
+    }
+
   </style>
 </head>
 <body>
@@ -160,4 +183,4 @@
 </div>
 
 </body>
-</html>
+  </html>
