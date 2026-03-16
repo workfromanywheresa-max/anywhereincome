@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Link</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+}
+
+/* Button style */
+button {
+  padding: 18px 32px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  animation: glowPulse 1.6s infinite;
+}
+
+/* Strong glow pulse */
+@keyframes glowPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0,123,255,0.7);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 25px rgba(0,123,255,0.9),
+                0 0 50px rgba(0,123,255,0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(0,123,255,0.7);
+  }
+}
+
+button:hover {
+  background: #0056b3;
+  animation-play-state: paused;
+}
+</style>
+
+</head>
+<body>
+
+<button onclick="window.open('https://omg10.com/4/10236414', '_blank')">
+Click to See Video
+</button>
+
+</body>
+</html>
