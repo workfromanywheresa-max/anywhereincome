@@ -6,7 +6,6 @@
   <script src="https://5gvci.com/act/files/tag.min.js?z=10741794" data-cfasync="false" async></script>
 
   <style>
-  /* Body with subtle breathing background */
   body {
     margin: 0;
     height: 100vh;
@@ -21,6 +20,20 @@
     0% { background-color: #111; }
     50% { background-color: #1a1a2e; }
     100% { background-color: #111; }
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between image and button */
+  }
+
+  .video-container img {
+    max-width: 320px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,123,255,0.5);
   }
 
   button {
@@ -66,9 +79,12 @@
 </head>
 <body>
 
-<button onclick="">
-Click to See Video
-</button>
+<div class="video-container">
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHLCaxAk0mDgBVufXBWSGT33Lw0dTXSZD-nT4_D7dXTWyRo4hBkS1Tn0jrjsLvak_znTBGXnbQ2XVzpY6jyRokuV0YjhyphenhyphenMoEoUxR_UQyRfXuPWwgMY01blDlb-yIoIrDv95MXlEZHHLZsy_uyAg5ZWRJHhm6y4qxx62tW9Kr3nvw5oUnuC8yU7NE-6oDxK/s320/1000172547.jpg" alt="Video Thumbnail">
+  <button onclick="">
+    Click to See Video
+  </button>
+</div>
 
 </body>
 </html>
