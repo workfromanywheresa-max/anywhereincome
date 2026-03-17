@@ -3,56 +3,6 @@
 <head>
   <title>Video Link</title>
 
-  <style>
-  /* Body with subtle breathing background */
-  body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #111;
-    animation: backgroundPulse 3s infinite alternate;
-  }
-
-  @keyframes backgroundPulse {
-    0% { background-color: #111; }
-    50% { background-color: #1a1a2e; }
-    100% { background-color: #111; }
-  }
-
-  button {
-    padding: 25px 50px;
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 12px;
-    font-size: 26px;
-    font-weight: bold;
-    transform-origin: center;
-    animation: buttonPulse 1.6s infinite;
-    box-shadow: 0 0 5px rgba(0,123,255,0.7);
-    text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f;
-    transition: background 0.3s;
-  }
-
-  button:hover {
-    background: #0056b3;
-    animation-play-state: paused;
-  }
-
-  @keyframes buttonPulse {
-    0% { transform: scale(1); box-shadow: 0 0 5px rgba(0,123,255,0.7); text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f; }
-    25% { transform: scale(1.1); box-shadow: 0 0 20px rgba(0,123,255,0.8), 0 0 40px rgba(0,123,255,0.5); text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 35px #00f; }
-    50% { transform: scale(1.15); box-shadow: 0 0 35px rgba(0,123,255,1), 0 0 70px rgba(0,123,255,0.6); text-shadow: 0 0 15px #00f, 0 0 30px #00f, 0 0 50px #00f; }
-    75% { transform: scale(1.1); box-shadow: 0 0 20px rgba(0,123,255,0.8), 0 0 40px rgba(0,123,255,0.5); text-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 35px #00f; }
-    100% { transform: scale(1); box-shadow: 0 0 5px rgba(0,123,255,0.7); text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f; }
-  }
-
-  html, body { width: 100%; height: 100%; }
-  </style>
-
   <!-- 💥 Ad Scripts placed right after <head> -->
   <script>
     (function(s){
