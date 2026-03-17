@@ -4,9 +4,10 @@
   <title>Video Link</title>
 
   <style>
+  /* Body with subtle breathing background */
   body {
     margin: 0;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +51,7 @@
     100% { transform: scale(1); box-shadow: 0 0 5px rgba(0,123,255,0.7); text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f; }
   }
 
-  html, body { width: 100%; }
+  html, body { width: 100%; height: 100%; }
   </style>
 
   <!-- 💥 Ad Scripts placed right after <head> -->
@@ -77,25 +78,8 @@
     Click to See Video
   </button>
 
-  <!-- Dynamic scroll spacer -->
-  <div id="scroll-spacer"></div>
-
-  <script>
-    // Ensure page is tall enough for inpage push ad to render
-    function adjustSpacer() {
-      const spacer = document.getElementById('scroll-spacer');
-      const viewportHeight = window.innerHeight;
-      const bodyHeight = document.body.scrollHeight;
-      if (bodyHeight < viewportHeight + 200) {
-        spacer.style.height = (viewportHeight + 200 - bodyHeight) + 'px';
-      } else {
-        spacer.style.height = '0px';
-      }
-    }
-
-    window.addEventListener('load', adjustSpacer);
-    window.addEventListener('resize', adjustSpacer);
-  </script>
+  <!-- Invisible spacer to make page scrollable -->
+  <div style="height: 1500px;"></div>
 
 </body>
 </html>
