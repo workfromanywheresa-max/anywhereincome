@@ -9,15 +9,12 @@
   /* Body with subtle breathing background */
   body {
     margin: 0;
-    min-height: 100vh;  /* allows scrolling */
+    height: 100vh;
     display: flex;
-    flex-direction: column; /* stack content vertically */
-    justify-content: flex-start; /* start from top */
+    justify-content: center;
     align-items: center;
     background: #111;
     animation: backgroundPulse 3s infinite alternate;
-    padding: 50px 20px; /* some spacing at top and bottom */
-    color: white;
   }
 
   @keyframes backgroundPulse {
@@ -55,17 +52,7 @@
     100% { transform: scale(1); box-shadow: 0 0 5px rgba(0,123,255,0.7); text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f; }
   }
 
-  html, body { width: 100%; }
-
-  /* Invisible but scrollable content */
-  .invisible-content {
-    opacity: 0;
-    width: 100%;
-    max-width: 800px;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-top: 50px;
-  }
+  html, body { width: 100%; height: 100%; }
   </style>
 
   <script>
@@ -82,10 +69,6 @@
 <button onclick="">
 Click to See Video
 </button>
-
-<div class="invisible-content">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et ligula in nunc bibendum fringilla a eu lectus. Mauris ut lacus at lorem cursus ultricies. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel metus sed turpis ullamcorper facilisis. Cras ut quam at sapien cursus lacinia. Phasellus sed lacus nec sapien gravida luctus. Sed a metus eget justo lacinia vehicula. Etiam a lectus nec metus aliquet fermentum. Morbi ultricies, ligula ac blandit vulputate, ligula orci vehicula nunc, non consequat metus mauris et sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer facilisis libero sed sapien hendrerit, et ultricies sapien ultricies. Suspendisse potenti. Sed dignissim, velit a facilisis luctus, ligula quam varius mauris, in suscipit est lacus non risus. Fusce in ligula non sapien vehicula vestibulum. Donec a eros id justo ultricies sagittis. Cras convallis sapien a arcu facilisis, nec luctus mi pharetra. Curabitur vitae velit et sapien bibendum mollis. Phasellus gravida leo sit amet felis dapibus, sed congue magna facilisis. Morbi vel sem at sapien sagittis feugiat. Sed rhoncus purus in lectus volutpat, in cursus libero posuere. Mauris semper, orci id efficitur convallis, sapien augue malesuada lorem, ut feugiat lorem odio sed sapien. Quisque sit amet mauris a neque cursus interdum. Aenean vel tellus ut turpis ultricies vehicula. Nam in mi eu nulla sodales aliquet. Integer consequat enim sit amet libero euismod, a lacinia nulla fermentum. Curabitur sed diam sed libero pretium tempus. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec vehicula odio id est feugiat, vel imperdiet eros venenatis. Phasellus vitae sapien eget turpis tincidunt aliquet. Nullam a velit non leo finibus ultricies. In eu turpis a risus blandit aliquet. Suspendisse potenti. Sed pharetra nisi sed magna porttitor, nec aliquet ligula sagittis. Integer sed eros libero. Fusce et velit ut justo tempor mollis. Quisque ut turpis ac nibh cursus imperdiet. Morbi ullamcorper, lorem in laoreet hendrerit, velit velit laoreet magna, eget bibendum mi augue nec sapien. Ut sed mauris nec leo dignissim vehicula. Cras at nisl vitae nunc placerat vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse potenti. Morbi in tellus a turpis lacinia facilisis. Vivamus vitae sapien ac sapien dignissim blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae lectus sed purus gravida vestibulum. Praesent malesuada ligula non mi posuere, non pulvinar odio elementum. Integer at dui ac felis sollicitudin sollicitudin. Nullam id lorem nec leo pulvinar sagittis. Donec rhoncus magna vitae turpis luctus, vitae dapibus justo viverra. Fusce non justo a magna commodo gravida. Curabitur fermentum lorem sed nunc feugiat, nec egestas ligula commodo.
-</div>
 
 </body>
 </html>
